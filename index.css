@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:ital@1&display=swap');
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#header{
+    width:100%;
+    height:auto;
+    background-color: rgba(7, 7, 87, 0.938);
+    display: flex;
+    justify-content: end; 
+    list-style-type:none; 
+    float: right; 
+    padding-right:100px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#header li{
+    margin-left: 30px;
+}
+#header li a{
+    text-align: center;
+    color:white;
+    text-decoration: none;  
+}
+
+#header li img{
+    height:17px;
+}
+
+#header li a span{
+    text-align: justify;
+    font-size: 23px;
+}
+
+/* ============================Navbar======================================================================== */
+
+
+#manubar{
+    width:100%;
+    height:50px;
+    display: flex;
+    /* justify-content: center ; */
+    align-items: center;
+    padding:20px 10px 10px 12px;
+    background-image:url('https://pragetx.com/image/work-img9.png');
+    background-size: cover;
+    list-style: none;
+    
+}
+
+#manubar li a #icon-image{
+    width:80%;
+    box-shadow: 0px 5px 10px 0px rgb(226, 126, 126);
+}
+
+#manubar li a{
+    margin:15px;
+    text-decoration: none;
+}
+
+#manubar li a:hover{
+    color:rgb(15, 116, 15);
+}
+
+#get-touch-btn{
+    width:10%;
+    height:40px;
+    padding:10px ;
+    background-color: rgb(22, 22, 90);
+    border-radius:25%;
+
+
+}
+
+#get-touch-btn a{
+    color:#fff;
+
+}
+
+/* ============= starting of dropdown-list for company manu============ */
+
+#company{
+    position: relative;
+}
+
+#company-dropdown-manu{
+    width:240px;
+    height:200px;
+    /* border: 1px solid red; */
+    background-color: #fff;
+    /* padding-top: 10px; */
+    box-shadow: 10px 5px 20px 0px rgb(238, 116, 116);
+    position: absolute;
+    top:20px;
+    /* left:-60px; */
+    display: none;
+    /* z-index: 1; */
+    list-style: none;
+}
+#company-dropdown-manu li a{
+    text-decoration: none;
+    
+}
+
+#company-dropdown-manu li{
+    padding-bottom:10px;
+    margin: 7px;
+}
+
+#company-dropdown-manu li:hover{
+    border-bottom: 2px solid rgb(32, 28, 28);
+
+}
+
+#company:hover #company-dropdown-manu{
+    display: block;   
+}
+
+/* ============= starting of dropdown-list for Service manu============ */
+
+
+#services{
+    position: relative;
+}
+
+.service-dropdown-manu{
+    width:350px;
+    height:420px;
+    /* border: 1px solid red; */
+    list-style:none;
+    /* padding-top: 10px; */
+    position: absolute;
+    top:20px;
+    left: -90px;
+    background-color: #fff;
+    box-shadow: 10px 5px 20px 0px rgb(241, 113, 113);
+    display: none;
+}
+
+.service-dropdown-manu li {
+    padding-bottom:10px;
+    margin: 7px;
+
+}
+
+.service-dropdown-manu li a{
+    text-decoration: none;
+}
+
+.service-dropdown-manu li:hover{
+    border-bottom: 2px solid rgb(49, 42, 42);
+}
+
+#services:hover .service-dropdown-manu{
+    display: block;
+}
+
+
+/* ============= starting of dropdown-list for hire developer manu============ */
+
+#hire-developer{
+    position: relative;
+}
+
+.hire-dropdown-manu{
+    width: 320px;
+    position: absolute;
+    top:20px;
+    /* border: 2px solid black; */
+    list-style: none;
+    /* padding-top: 10px; */
+    background-color: #fff;
+    box-shadow: 10px 5px 20px 0px rgb(236, 131, 131);
+    display: none;
+}
+
+.hire-dropdown-manu li{
+    padding-bottom: 10px;
+    margin: 7px;
+
+}
+
+.hire-dropdown-manu li:hover{
+    border-bottom: 2px solid black;  
+}
+
+.hire-dropdown-manu li a{
+    text-decoration: none;
+}
+
+#hire-developer:hover .hire-dropdown-manu{
+    display: block;
+}

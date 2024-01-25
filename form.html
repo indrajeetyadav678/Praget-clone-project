@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        nav {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(54, 54, 99);
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            text-shadow:0px 5px 7px rgb(156, 228, 178);
+        }
+
+        ul {
+            list-style-type: none;
+            /* position:relative; */
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        ul li a {
+            text-decoration: none;
+            margin: 30px;
+            color: white;
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+
+        #drop {
+            position: relative;
+
+        }
+
+        #drop-down {
+            list-style-type: none;
+            position: absolute;
+            top: 10px;
+            display: none;
+            background-color: rgba(24, 21, 21, 0.5);
+            margin: 20px;
+        }
+
+        #drop:hover #drop-down {
+            display: block;
+        }
+
+        #check-btn {
+            font-size: 30px;
+            color: white;
+            position:relative;
+            left:80%;
+            line-height: 30px;
+            margin-right: 20px;
+            cursor: pointer;
+            display: none;
+
+        }
+
+        #check{
+            display: none;
+        }
+
+        @media(max-width:876px){
+
+            .logo{
+               margin-right:50%; 
+            }
+            #check-btn{
+                display: block;
+                /* position: relative; */
+            }
+
+            nav{
+                position:sticky;
+                top:0px;
+            }
+
+            ul{
+                display: inline-block;
+                width:100%;
+                height:300px;
+                background-color: rgb(41, 35, 35);
+                position:absolute;
+                top:60px;
+                text-align: center;
+                display:none;
+            }
+
+            ul li{
+                margin:20px;
+                position: relative;
+            }
+
+            #drop{
+                position: relative;
+            }
+
+            #drop-down{
+                width:30%;
+                height:auto;
+                /* text-align: left; */
+                position: absolute;
+                top:-40px;
+                right:15%;
+            }
+
+            #check:checked ~ #responsive-nav{
+                display: block;
+                left:0;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post" autocomplete="on" target="-blank"
+        oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <label for="fname">enter your name</label>
+        <input type="text" name="fname" id="fname"><br />
+        <label for="dob">Date of birth</label>
+        <input type="date" name="date of birth" id="dob" max="1970-01-01"><br /><br />
+        <label for="dob1">Date of birth</label>
+
+        <input type="date" name="date of birth" id="dob1" min="1999-01-01"><br /><br />
+
+        <label for="course">choose your course</label>
+        <select name="course name" id="course">
+            <optgroup>technical</optgroup>
+            <option value="c++">c++</option>
+            <option value="java">java</option>
+            <option value="pythan">pythan</option>
+            <option value="html">html</option>
+            <option value="css">css</option>
+            <option value="javascript">javascript</option>
+            <optgroup>none technical</optgroup>
+            <option value="excel">excel</option>
+            <option value="msword">msword</option>
+            <option value="telly">telly</option>
+        </select><br /><br />
+        <label for="address">temparery address</label>
+        <textarea name="address" id="address" cols="30" rows="10"></textarea><br />
+        <label for="address1">parmanent address</label>
+        <textarea name="parmanent" id="address1" style="width:100px; height:40px;"></textarea><br /><br />
+        <button type="button" onclick="alert('hello world')">click here</button><br /><br />
+
+        <input list="cars">
+        <datalist id="cars">
+            <option value="volvo">
+            <option value="lenovo">
+            <option value="safari">
+        </datalist><br /><br />
+        0
+        <input type="range" name="a" id="a" value="40">
+        100+
+        <input type="number" name="b" id="b" value="50">
+        =
+        <output name="x" for="a b"></output><br /><br />
+
+        <label for="adhar">Enter your adhar number</label>
+        <input type="number" name="adhar" id="adhar" placeholder="1234-5678-9012" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}"
+            required maxlength="12">
+        <br /><br />
+        <label for="pin">pin</label>
+        <input type="text" name="pin" id="pin" maxlength="4" size="4">
+
+
+
+    </form>
+
+
+    <button onclick="getlocation()">try it</button>
+    <p id="demo"></p>
+
+    <script>
+        const x = document.getById("demo");
+        function takelocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "geolocation is not soppourt by browser";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "latitude:" + position.coords.latitude + "<br>longitude:" + position.coords.longitude;
+        }
+    </script>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" id="check-btn"><i class="fa-solid fa-bars"></i></label>
+        <input type="checkbox" name="" id="home-drop">
+       
+        <label class="logo">Globalmixhub.com</label>
+        <ul id="responsive-nav">
+            
+            <li id="drop"> <label for="home-drop">home</label> 
+                <ul id="drop-down">
+                    <li><a href="#">1dsdsdw</a></li>
+                    <li><a href="#">2asasa</a></li>
+                    <li><a href="#">3asada</a></li>
+                    <li><a href="#">4vdfdf</a></li>
+                    <li><a href="#">5wdwdw</a></li>
+                </ul>
+            </li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">service</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">feedback</a></li>
+        </ul>
+
+        
+    </nav>
+    <center>
+        <iframe style="width:70%; height:650px;" src="https://www.youtube.com/embed/oLgtucwjVII?si=Cd_dwpwsIsXq3ZjU"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </center>
+</body>
+
+</html>
