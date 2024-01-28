@@ -238,7 +238,7 @@
 */
 /* ================================ Landing part -1 =============================== */
 
- #land_part_1 {
+#land_part_1 {
     width: 100%;
     height: 370px;
     /* border: 1px solid black ; */
@@ -277,19 +277,21 @@
     margin-top: 35px;
     border: 1px solid rgb(6, 6, 60);
 }
-#part1_button:hover{
+
+#part1_button:hover {
     background-color: rgb(246, 246, 250);
     color: #07074d;
-} 
+}
 
 /* ============================= Landing part -2 ================================== */
 
-#part2_box{
+#part2_box {
     width: 100%;
-    height:150px;
+    height: 150px;
     overflow: hidden;
 }
-#part2_slider{
+
+#part2_slider {
     width: 200%;
     height: 150px;
     display: flex;
@@ -301,27 +303,73 @@
     top: 0px;
     animation: slider2 25s infinite;
 }
-@keyframes slider2{
-    0%{left:0%; top:0px;}
-    10%{left:-10%; top:0px; translate:smooth;}
-    20%{left:-20%; top:0px;}
-    30%{left:-30%; top:0px;}
-    40%{left:-40%; top:0px;}
-    50%{left:-50%; top:0px;}
-    60%{left:-60%; top:0px;}
-    70%{left:-70%; top:0px;}
-    80%{left:-80%; top:0px;}
-    90%{left:-90%; top:0px;}
-    100%{left:-100%; top:0px;}
+
+@keyframes slider2 {
+    0% {
+        left: 0%;
+        top: 0px;
+    }
+
+    10% {
+        left: -10%;
+        top: 0px;
+        translate: smooth;
+    }
+
+    20% {
+        left: -20%;
+        top: 0px;
+    }
+
+    30% {
+        left: -30%;
+        top: 0px;
+    }
+
+    40% {
+        left: -40%;
+        top: 0px;
+    }
+
+    50% {
+        left: -50%;
+        top: 0px;
+    }
+
+    60% {
+        left: -60%;
+        top: 0px;
+    }
+
+    70% {
+        left: -70%;
+        top: 0px;
+    }
+
+    80% {
+        left: -80%;
+        top: 0px;
+    }
+
+    90% {
+        left: -90%;
+        top: 0px;
+    }
+
+    100% {
+        left: -100%;
+        top: 0px;
+    }
 }
-#part2_slider img{
-    width:75px;
+
+#part2_slider img {
+    width: 75px;
     margin-left: 28px;
 }
 
 /* ============================== Landing part-3 =============================== */
 
-#part3_box{
+#part3_box {
     width: 100%;
     height: 300px;
     /* border: 1px solid black; */
@@ -330,13 +378,114 @@
     padding-top: 80px;
     /* background-color: aquamarine; */
 }
-#part3_heading{
-    color:black;
+
+#part3_heading {
+    color: black;
     font-size: 40px;
     font-weight: bolder;
     margin-bottom: 15px;
 }
-#part3_peragraph{
- font-size: 18px;
- font-weight: 900;
+
+#part3_peragraph {
+    padding: 10px 120px 80px 120px;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 30px;
+}
+
+#part3_tech_box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#part3_one1 {
+    width: 400px;
+    height: 450px;
+    overflow: hidden;
+    /* border: 1px solid black; */
+    position: relative;
+}
+
+#part3_one {
+    width: 330px;
+    height: 450px;
+    overflow: hidden;
+    /* border: 1px solid black; */
+    position: relative;
+}
+
+#part3_one1 img {
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+#part3_one img {
+    width: 330px;
+    height: 300px;
+    border: 1px solid black;
+    /* z-index: -1; */
+    /* position: relative;    */
+}
+
+#part3_one img:hover,
+#part3_one1 img:hover {
+    scale: 1.05;
+}
+
+#part3_h1 {
+    /* font-size: 30px; */
+    font-weight: bolder;
+    color: rgb(252, 249, 249);
+    position: absolute;
+    top: 210px;
+    left: 150px;
+    letter-spacing: 2px;
+}
+
+#part3_one1 img:hover~#part3_h1 {
+    top: 100px;
+}
+
+#part3_one img:hover~#part3_h1 {
+    top: 100px;
+    /* transition: 2s; */
+}
+
+#part3_h {
+    /* font-size: 28px; */
+    font-weight: bolder;
+    color: rgb(252, 249, 249);
+    letter-spacing: 2px;
+    position: absolute;
+    top: 200px;
+    background: transparent;
+}
+
+#part3_one img:hover~#part3_h {
+    top: 50px;
+    /* transition: 3s; */
+}
+
+#part3_d {
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    color: #fff;
+    display: none;
+}
+
+#part3_one img:hover~#part3_d {
+    display: block;
+    top: 150px;
+    /* transition: 3s; */
+}
+
+#part3_one1 img:hover~#part3_d {
+    display: block;
+    top: 150px;
+    /* transition: 3s; */
 }
