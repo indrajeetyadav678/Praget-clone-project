@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -371,9 +372,10 @@
 
 #part3_box {
     width: 100%;
-    height: 300px;
+    height: auto;
+    margin-bottom: 40px;
     /* border: 1px solid black; */
-    margin-top: 70px;
+    /* margin-top: 70px; */
     text-align: center;
     padding-top: 80px;
     /* background-color: aquamarine; */
@@ -402,33 +404,29 @@
 }
 
 #part3_one1 {
-    width: 400px;
-    height: 450px;
+    width: 420px;
+    height: auto;
     overflow: hidden;
-    /* border: 1px solid black; */
     position: relative;
 }
 
 #part3_one {
-    width: 330px;
-    height: 450px;
+    width: 350px;
+    height: auto;
     overflow: hidden;
-    /* border: 1px solid black; */
     position: relative;
 }
 
 #part3_one1 img {
-    width: 400px;
-    height: 300px;
+    width: 420px;
+    height: 350px;
     border: 1px solid black;
 }
 
 #part3_one img {
-    width: 330px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     border: 1px solid black;
-    /* z-index: -1; */
-    /* position: relative;    */
 }
 
 #part3_one img:hover,
@@ -437,37 +435,33 @@
 }
 
 #part3_h1 {
-    /* font-size: 30px; */
     font-weight: bolder;
     color: rgb(252, 249, 249);
     position: absolute;
-    top: 210px;
+    top: 290px;
     left: 150px;
     letter-spacing: 2px;
 }
 
 #part3_one1 img:hover~#part3_h1 {
-    top: 100px;
+    top: 230px;
 }
 
 #part3_one img:hover~#part3_h1 {
-    top: 100px;
-    /* transition: 2s; */
+    top: 230px;
 }
 
 #part3_h {
-    /* font-size: 28px; */
     font-weight: bolder;
     color: rgb(252, 249, 249);
     letter-spacing: 2px;
     position: absolute;
-    top: 200px;
+    top: 280px;
     background: transparent;
 }
 
 #part3_one img:hover~#part3_h {
-    top: 50px;
-    /* transition: 3s; */
+    top: 180px;
 }
 
 #part3_d {
@@ -480,12 +474,111 @@
 
 #part3_one img:hover~#part3_d {
     display: block;
-    top: 150px;
+    bottom: 30px;
     /* transition: 3s; */
 }
 
 #part3_one1 img:hover~#part3_d {
     display: block;
-    top: 150px;
+    bottom: 30px;
     /* transition: 3s; */
+}
+
+#part4 {
+    width: 100%;
+    height: 250px;
+    padding: 80px 0px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bolder;
+    color: #fff;
+    background-image: url('https://pragetx.com/image/are-you-startup-bg.jpg');
+}
+
+#part5 {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 2px solid black; */
+    padding: 20px 40px;
+}
+
+#part5_one {
+    width: 500px;
+    height: 500px;
+    /* border: 1px solid black; */
+    margin-right: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0px 20px;
+    line-height: 30px;
+}
+#part5_one h1{
+    font-size: 37px;
+    font-weight: bold;
+    padding: 15px 0px;
+    color: #07074d;
+    line-height: 40px;
+}
+#part5_one h3{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 25px 0px;
+    color: #07074d;
+}
+#part5_two{
+    width: 500px;
+    height: 500px;
+    /* background-image: url('https://pragetx.com/image/dots-square.png'); */
+    /* border: 1px solid rgb(18, 16, 16); */
+    position: relative;
+}
+
+#part5_two #color{
+    width: 470px;
+    height: 470px;
+    background-color: #2d2d65;
+    position: absolute;
+    top:30px;
+    border-bottom-left-radius: 90px;
+    /* display: none; */
+}
+/* #part5_two #transp_img{
+    width: 450px;   
+    height: 350px;
+    border: 2px solid rgb(226, 33, 33);
+    position: absolute;
+    left:50px; 
+} */
+
+#part5_two img {
+    width: 470px;   
+    height: 470px;
+    border: 2px solid black;
+    border-bottom-left-radius: 90px;
+    border-top-right-radius: 90px;
+    position: absolute;
+    left:30px;
+    /* top:50px; */
+    /* display: none; */
+}
+
+/* ============= Landing part -6 ============= */
+#part6{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 40px;
+    grid-column-gap: 40px;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+#part6_one{
+    width:300px;
+    height: 130px;
+    /* border: 3px solid blue; */
+    box-shadow: 15px 10px 30px rgb(209, 207, 207);
 }
